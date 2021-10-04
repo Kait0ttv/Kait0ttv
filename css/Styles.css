@@ -1,7 +1,7 @@
 body {
     background-image: url("https://cdn.discordapp.com/attachments/889453414847754250/894250206202310686/bannierekaitosite.png");
     text-align: center;
-    background-size: 1920px 1080px;
+    background-size: cover;
 }
 
 p {
