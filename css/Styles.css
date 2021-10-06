@@ -7,11 +7,11 @@ body {
 }
 
 p {
-    color: white;
+    color: black;
     font-size: x-large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
-    color:yellow;
+    color :blue;
 }
