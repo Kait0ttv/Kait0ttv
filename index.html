@@ -16,18 +16,12 @@
         MARISTES TRACKER
         </h1>
     </header>
-    <form id="uploadForm">
-        <input type="text" id="pseudo" placeholder="Votre pseudo" required><br><br>
-        <input type="text" id="caption" placeholder="Légende de la photo" required><br><br>
-        <div class="file-upload">
-            <input type="file" id="photo" accept="image/*" required>
-            <label for="photo" class="custom-file-upload">Choisir un fichier</label>
-        </div>
-        <br><br>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="photo" accept="image/*" required>
         <button type="submit">PUBLIER</button>
     </form>
-    
     <div id="gallery"></div>
+
 
     <!-- Lien vers le fichier JavaScript externe -->
     <script src="script.js"></script>
