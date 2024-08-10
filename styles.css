@@ -9,7 +9,7 @@ body {
 
 /* Style de l'en-tête */
 header {
-    background-color: #4caf4f00; /* Assurez-vous que ce code couleur est correct ou remplacez-le par une couleur valide */
+    background-color: #4caf4f; /* Couleur d'en-tête mise à jour */
     color: white;
     padding: 20px; 
     text-align: center;
@@ -64,7 +64,7 @@ form input[type="file"] {
     width: 100%;
     max-width: 400px;
     padding: 10px;
-    margin: 10px auto; /* Marges automatique pour centrer les champs */
+    margin: 10px auto; /* Marges automatiques pour centrer les champs */
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box; /* Inclut padding et bordure dans la largeur */
@@ -98,7 +98,6 @@ form button:hover {
     margin: 0 auto;
 }
 
-
 /* Style de chaque carte photo */
 .photo-card {
     background-color: white;
@@ -128,14 +127,10 @@ form button:hover {
     transition: transform 0.3s; /* Transition douce pour l'agrandissement */
 }
 
-
-
 .photo-card:hover {
     transform: scale(1.05); /* Effet de zoom au survol */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
 }
-
-
 
 /* Style du pseudo dans la carte photo */
 .photo-card .pseudo {
@@ -182,4 +177,3 @@ form button:hover {
     text-align: center;
     margin: 10px 0;
 }
-
