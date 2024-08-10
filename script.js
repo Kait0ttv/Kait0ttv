@@ -1,27 +1,4 @@
-// script.js
-
-// Fonction pour initialiser les événements d'agrandissement sur les cartes photo
-function initializePhotoCardEvents() {
-    const photoCards = document.querySelectorAll('.photo-card');
-    
-    photoCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const isExpanded = card.classList.contains('expanded');
-            
-            // Retirer la classe 'expanded' de toutes les cartes
-            photoCards.forEach(c => c.classList.remove('expanded'));
-            
-            // Ajouter la classe 'expanded' à la carte cliquée si elle n'était pas agrandie
-            if (!isExpanded) {
-                card.classList.add('expanded');
-            }
-        });
-    });
-}
-
-// Attendre que le DOM soit complètement chargé avant d'attacher les événements
 document.addEventListener('DOMContentLoaded', () => {
-    // Gestion du formulaire de téléchargement
     document.getElementById("uploadForm").addEventListener("submit", function(event) {
         event.preventDefault();
 
@@ -42,11 +19,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Initialiser les événements sur les cartes photo au chargement
+    function initializePhotoCardEvents() {
+        const photoCards = document.querySelectorAll('.photo-card');
+        
+        photoCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const isExpanded = card.classList.contains('expanded');
+                
+                photoCards.forEach(c => c.classList.remove('expanded'));
+                
+                if (!isExpanded) {
+                    card.classList.add('expanded');
+                }
+            });
+        });
+    }
+
     initializePhotoCardEvents();
 });
 
-// Fonction pour ajouter une photo à la galerie
 function addPhotoToGallery(photoURL, pseudo, caption) {
     const gallery = document.getElementById("gallery");
 
@@ -70,6 +61,5 @@ function addPhotoToGallery(photoURL, pseudo, caption) {
 
     gallery.appendChild(photoCard);
 
-    // Réinitialiser les événements d'agrandissement après ajout de la photo
     initializePhotoCardEvents();
 }
